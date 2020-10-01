@@ -7,14 +7,14 @@ from glob import glob
 from tempfile import mkdtemp
 import subprocess
 import shutil
-ROUGE_path = os.path.join("/".join(os.path.abspath(__file__).split("/")[:-1]) +
-                          "/RELEASE-1.5.5/ROUGE-1.5.5.pl")
-data_path = os.path.join("/".join(os.path.abspath(__file__).split("/")[:-1]) +
-                         "/RELEASE-1.5.5/data")
+#ROUGE_path = os.path.join("/".join(os.path.abspath(__file__).split("/")[:-1]) +
+#                          "/RELEASE-1.5.5/ROUGE-1.5.5.pl")
+#data_path = os.path.join("/".join(os.path.abspath(__file__).split("/")[:-1]) +
+#                         "/RELEASE-1.5.5/data")
 
 
 class Pythonrouge:
-    def __init__(self, summary_file_exist=True, summary=None, reference=None,
+    def __init__(self, ROUGE_path, data_path, summary_file_exist=True, summary=None, reference=None,
                  delete_xml=True, xml_dir='/tmp/',
                  recall_only=False, f_measure_only=False,
                  peer_path='/tmp/', model_path='/tmp/',
